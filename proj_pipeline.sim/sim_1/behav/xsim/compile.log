@@ -1,6 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cpuclk
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sim_1/new/cpuclk_sim.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cpuclk_sim
