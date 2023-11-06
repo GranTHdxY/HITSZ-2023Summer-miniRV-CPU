@@ -1,0 +1,404 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Jul 11 18:39:16 2023
+# Process ID: 1752
+# Current directory: E:/comp2012/proj_miniRV/proj_single_cycle
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10260 E:\comp2012\proj_miniRV\proj_single_cycle\proj_single_cycle.xpr
+# Log file: E:/comp2012/proj_miniRV/proj_single_cycle/vivado.log
+# Journal file: E:/comp2012/proj_miniRV/proj_single_cycle\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 1068.434 ; gain = 187.371
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/impl_1/miniRV_SoC.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/impl_1/miniRV_SoC.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'miniRV_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/DRAM.mif'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/data_ram.coe'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/IROM.coe'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/inst_rom.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj miniRV_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/DRAM/sim/DRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/IROM/sim/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Button.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Button
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Digital_LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Digital_LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/NPC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/RF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RF
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/SEXT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEXT
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Switch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Switch
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/myCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sim_1/new/miniRV_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto c7409b1ddabf4fa18ec9204b6edbe050 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module xil_defaultlib.cpuclk_clk_wiz
+Compiling module xil_defaultlib.cpuclk
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.NPC
+Compiling module xil_defaultlib.SEXT
+Compiling module xil_defaultlib.controller
+Compiling module xil_defaultlib.RF
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.myCPU
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.IROM
+Compiling module xil_defaultlib.Bridge
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.DRAM
+Compiling module xil_defaultlib.LED
+Compiling module xil_defaultlib.Button
+Compiling module xil_defaultlib.Switch
+Compiling module xil_defaultlib.Digital_LED
+Compiling module xil_defaultlib.miniRV_SoC
+Compiling module xil_defaultlib.miniRV_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot miniRV_sim_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/xsim.dir/miniRV_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Jul 11 19:19:50 2023...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1909.199 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "miniRV_sim_behav -key {Behavioral:sim_1:Functional:miniRV_sim} -tclbatch {miniRV_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source miniRV_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'miniRV_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 1911.430 ; gain = 2.230
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'miniRV_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/DRAM.mif'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/data_ram.coe'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/IROM.coe'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/inst_rom.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj miniRV_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/DRAM/sim/DRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/IROM/sim/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Button.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Button
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Digital_LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Digital_LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/NPC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/RF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RF
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/SEXT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEXT
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Switch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Switch
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/myCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sim_1/new/miniRV_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto c7409b1ddabf4fa18ec9204b6edbe050 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module xil_defaultlib.cpuclk_clk_wiz
+Compiling module xil_defaultlib.cpuclk
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.NPC
+Compiling module xil_defaultlib.SEXT
+Compiling module xil_defaultlib.controller
+Compiling module xil_defaultlib.RF
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.myCPU
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.IROM
+Compiling module xil_defaultlib.Bridge
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.DRAM
+Compiling module xil_defaultlib.LED
+Compiling module xil_defaultlib.Button
+Compiling module xil_defaultlib.Switch
+Compiling module xil_defaultlib.Digital_LED
+Compiling module xil_defaultlib.miniRV_SoC
+Compiling module xil_defaultlib.miniRV_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot miniRV_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "miniRV_sim_behav -key {Behavioral:sim_1:Functional:miniRV_sim} -tclbatch {miniRV_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source miniRV_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'miniRV_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1913.016 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'miniRV_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/DRAM.mif'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/data_ram.coe'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/IROM.coe'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim/inst_rom.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj miniRV_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/DRAM/sim/DRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/IROM/sim/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Button.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Button
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Digital_LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Digital_LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/NPC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/RF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RF
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/SEXT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEXT
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Switch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Switch
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/myCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sim_1/new/miniRV_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto c7409b1ddabf4fa18ec9204b6edbe050 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module xil_defaultlib.cpuclk_clk_wiz
+Compiling module xil_defaultlib.cpuclk
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.NPC
+Compiling module xil_defaultlib.SEXT
+Compiling module xil_defaultlib.controller
+Compiling module xil_defaultlib.RF
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.myCPU
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.IROM
+Compiling module xil_defaultlib.Bridge
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.DRAM
+Compiling module xil_defaultlib.LED
+Compiling module xil_defaultlib.Button
+Compiling module xil_defaultlib.Switch
+Compiling module xil_defaultlib.Digital_LED
+Compiling module xil_defaultlib.miniRV_SoC
+Compiling module xil_defaultlib.miniRV_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot miniRV_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "miniRV_sim_behav -key {Behavioral:sim_1:Functional:miniRV_sim} -tclbatch {miniRV_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source miniRV_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'miniRV_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1913.016 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 11 22:04:15 2023...

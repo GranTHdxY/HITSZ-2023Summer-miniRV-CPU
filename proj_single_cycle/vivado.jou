@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Jul 11 18:39:16 2023
+# Process ID: 1752
+# Current directory: E:/comp2012/proj_miniRV/proj_single_cycle
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10260 E:\comp2012\proj_miniRV\proj_single_cycle\proj_single_cycle.xpr
+# Log file: E:/comp2012/proj_miniRV/proj_single_cycle/vivado.log
+# Journal file: E:/comp2012/proj_miniRV/proj_single_cycle\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/impl_1/miniRV_SoC.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/comp2012/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/impl_1/miniRV_SoC.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+launch_simulation
+source miniRV_sim.tcl
+close_sim
+launch_simulation
+source miniRV_sim.tcl
+close_sim
+launch_simulation
+source miniRV_sim.tcl
+close_sim
