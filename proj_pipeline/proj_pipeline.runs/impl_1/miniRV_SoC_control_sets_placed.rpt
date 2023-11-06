@@ -1,0 +1,153 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Jul 19 17:26:49 2023
+| Host         : PA04 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file miniRV_SoC_control_sets_placed.rpt
+| Design       : miniRV_SoC
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    87 |
+| Unused register locations in slices containing registers |    91 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |           12 |
+|      4 |            1 |
+|    16+ |           74 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              68 |           28 |
+| No           | No                    | Yes                    |             489 |          198 |
+| No           | Yes                   | No                     |               4 |            4 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             204 |           94 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------+-----------------------------------------------------------------------------------------------+------------------------------------------+------------------+----------------+
+|                Clock Signal               |                                         Enable Signal                                         |             Set/Reset Signal             | Slice Load Count | Bel Load Count |
++-------------------------------------------+-----------------------------------------------------------------------------------------------+------------------------------------------+------------------+----------------+
+|  Digital_LED_0/DN_data_reg[0]_LDC_i_1_n_0 |                                                                                               | Digital_LED_0/DN_data_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  Digital_LED_0/DN_data_reg[3]_LDC_i_1_n_0 |                                                                                               | Digital_LED_0/DN_data_reg[3]_LDC_i_2_n_0 |                1 |              1 |
+|  Digital_LED_0/DN_data_reg[1]_LDC_i_1_n_0 |                                                                                               | Digital_LED_0/DN_data_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  Digital_LED_0/DN_data_reg[2]_LDC_i_1_n_0 |                                                                                               | Digital_LED_0/DN_data_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  fpga_clk_IBUF_BUFG                       |                                                                                               | Digital_LED_0/DN_data_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  fpga_clk_IBUF_BUFG                       |                                                                                               | Digital_LED_0/DN_data_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  fpga_clk_IBUF_BUFG                       |                                                                                               | Digital_LED_0/DN_data_reg[3]_LDC_i_2_n_0 |                1 |              1 |
+|  fpga_clk_IBUF_BUFG                       |                                                                                               | Digital_LED_0/DN_data_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  fpga_clk_IBUF_BUFG                       | Digital_LED_0/cnt_end                                                                         | Digital_LED_0/DN_data_reg[0]_LDC_i_1_n_0 |                1 |              1 |
+|  fpga_clk_IBUF_BUFG                       | Digital_LED_0/cnt_end                                                                         | Digital_LED_0/DN_data_reg[3]_LDC_i_1_n_0 |                1 |              1 |
+|  fpga_clk_IBUF_BUFG                       | Digital_LED_0/cnt_end                                                                         | Digital_LED_0/DN_data_reg[1]_LDC_i_1_n_0 |                1 |              1 |
+|  fpga_clk_IBUF_BUFG                       | Digital_LED_0/cnt_end                                                                         | Digital_LED_0/DN_data_reg[2]_LDC_i_1_n_0 |                1 |              1 |
+|  Core_cpu/IF_ID_0/E[0]                    |                                                                                               |                                          |                1 |              4 |
+|  fpga_clk_IBUF_BUFG                       | Digital_LED_0/cnt_end                                                                         | fpga_rst_IBUF                            |                7 |             16 |
+|  fpga_clk_IBUF_BUFG                       | Core_cpu/EX_MEM_0/E[0]                                                                        | fpga_rst_IBUF                            |               19 |             24 |
+|  fpga_clk_IBUF_BUFG                       | Core_cpu/EX_MEM_0/MEM_ALU_C_reg[5]_0[0]                                                       | fpga_rst_IBUF                            |               19 |             32 |
+|  cpu_clk_BUFG                             | Core_cpu/ID_EX_0/EX_rD1[31]_i_1_n_0                                                           | fpga_rst_IBUF                            |                6 |             32 |
+|  cpu_clk_BUFG                             | Core_cpu/IF_ID_0/FSM_onehot_if_pc_updata_reg[1]_0[0]                                          | fpga_rst_IBUF                            |               14 |             32 |
+|  fpga_clk_IBUF_BUFG                       |                                                                                               | fpga_rst_IBUF                            |               27 |             55 |
+|  cpu_clk_BUFG                             | Core_cpu/IF_ID_0/ID_pc[31]_i_1_n_0                                                            | fpga_rst_IBUF                            |               25 |             64 |
+| ~EX_Asel[1]                               |                                                                                               |                                          |               27 |             64 |
+|  cpu_clk_BUFG                             | Core_cpu/MEM_WB_0/p_0_in                                                                      |                                          |               12 |             96 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_512_767_0_0_i_1_n_0     |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_3840_4095_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_3584_3839_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_4096_4351_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_4352_4607_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_4864_5119_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_4608_4863_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_5120_5375_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_11264_11519_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_5376_5631_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_255_0_0_i_1_n_0       |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_10240_10495_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_1024_1279_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_10496_10751_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_10752_11007_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_11008_11263_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_8448_8703_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_11520_11775_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_11776_12031_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_12032_12287_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_12544_12799_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_12288_12543_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_13568_13823_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_14336_14591_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_14080_14335_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_14592_14847_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_14848_15103_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_15104_15359_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_15360_15615_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_1536_1791_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_15616_15871_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_16128_16383_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_15872_16127_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_2048_2303_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_1792_2047_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_2304_2559_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_2560_2815_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_256_511_0_0_i_1_n_0     |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_3072_3327_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_2816_3071_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_3328_3583_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_13312_13567_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_13056_13311_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_12800_13055_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_1280_1535_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_6144_6399_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_6400_6655_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_6656_6911_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_6912_7167_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_7168_7423_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_7424_7679_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_7680_7935_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_7936_8191_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_768_1023_0_0_i_1_n_0    |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_13824_14079_0_0_i_1_n_0 |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_8192_8447_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_8960_9215_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_8704_8959_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_9216_9471_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_9472_9727_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_9728_9983_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_9984_10239_0_0_i_1_n_0  |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_5888_6143_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             | Mem_DRAM/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_5632_5887_0_0_i_1_n_0   |                                          |               32 |            128 |
+|  cpu_clk_BUFG                             |                                                                                               | fpga_rst_IBUF                            |              167 |            430 |
++-------------------------------------------+-----------------------------------------------------------------------------------------------+------------------------------------------+------------------+----------------+
+
+
