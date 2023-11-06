@@ -1,0 +1,683 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jul 19 15:54:40 2023
+# Process ID: 5500
+# Current directory: E:/comp2012/proj_miniRV/proj_pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9340 E:\comp2012\proj_miniRV\proj_pipeline\proj_pipeline.xpr
+# Log file: E:/comp2012/proj_miniRV/proj_pipeline/vivado.log
+# Journal file: E:/comp2012/proj_miniRV/proj_pipeline\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.xpr
+INFO: [Project 1-313] Project file moved from 'D:/new/proj_pipeline' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files', nor could it be found using path 'D:/new/proj_pipeline/proj_pipeline.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name cpuclk -dir e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {cpuclk} CONFIG.PRIMITIVE {PLL} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25.000} CONFIG.USE_RESET {false} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_DIVCLK_DIVIDE {4} CONFIG.MMCM_CLKFBOUT_MULT_F {33} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {33} CONFIG.CLKOUT1_JITTER {352.369} CONFIG.CLKOUT1_PHASE_ERROR {261.747}] [get_ips cpuclk]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'cpuclk' to 'cpuclk' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+launch_runs -jobs 16 cpuclk_synth_1
+[Wed Jul 19 15:56:50 2023] Launched cpuclk_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name dist_mem_gen -vendor xilinx.com -library ip -version 8.0 -module_name IROM -dir e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip
+set_property -dict [list CONFIG.depth {16384} CONFIG.data_width {32} CONFIG.Component_Name {IROM} CONFIG.coefficient_file {E:/comp2012/proj_miniRV/proj_single_cycle/IROM.coe}] [get_ips IROM]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'IROM' to 'IROM' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'e:/comp2012/proj_miniRV/proj_single_cycle/IROM.coe' provided. It will be converted relative to IP Instance files '../../../../../proj_single_cycle/IROM.coe'
+generate_target {instantiation_template} [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'IROM'...
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'IROM'...
+catch { config_ip_cache -export [get_ips -all IROM] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci]
+launch_runs -jobs 16 IROM_synth_1
+[Wed Jul 19 15:59:15 2023] Launched IROM_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/IROM_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name dist_mem_gen -vendor xilinx.com -library ip -version 8.0 -module_name DRAM -dir e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip
+set_property -dict [list CONFIG.depth {16384} CONFIG.data_width {32} CONFIG.Component_Name {DRAM}] [get_ips DRAM]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'DRAM' to 'DRAM' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/DRAM/DRAM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'DRAM'...
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/DRAM/DRAM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'DRAM'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'DRAM'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'DRAM'...
+catch { config_ip_cache -export [get_ips -all DRAM] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/DRAM/DRAM.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/DRAM/DRAM.xci]
+launch_runs -jobs 16 DRAM_synth_1
+[Wed Jul 19 15:59:55 2023] Launched DRAM_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/DRAM_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/DRAM/DRAM.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'miniRV_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.coe'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj miniRV_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/DRAM/sim/DRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/sim/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/Bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sim_1/new/miniRV_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto e1f68395fb5e4a219a1ab4c942d2609d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'switch' on this module [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sim_1/new/miniRV_sim.v:35]
+ERROR: [VRFC 10-2063] Module <if_stop> not found while processing module instance <if_stop_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:133]
+ERROR: [VRFC 10-2063] Module <PC> not found while processing module instance <PC_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:150]
+ERROR: [VRFC 10-2063] Module <NPC> not found while processing module instance <NPC_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:162]
+ERROR: [VRFC 10-2063] Module <SEXT> not found while processing module instance <SEXT_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:173]
+ERROR: [VRFC 10-2063] Module <controller> not found while processing module instance <controller_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:179]
+ERROR: [VRFC 10-2063] Module <RF> not found while processing module instance <RF_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:193]
+ERROR: [VRFC 10-2063] Module <ALU> not found while processing module instance <ALU_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:210]
+ERROR: [VRFC 10-2063] Module <IF_ID> not found while processing module instance <IF_ID_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:222]
+ERROR: [VRFC 10-2063] Module <ID_EX> not found while processing module instance <ID_EX_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:240]
+ERROR: [VRFC 10-2063] Module <EX_MEM> not found while processing module instance <EX_MEM_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:275]
+ERROR: [VRFC 10-2063] Module <MEM_WB> not found while processing module instance <MEM_WB_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:299]
+ERROR: [VRFC 10-2063] Module <LED> not found while processing module instance <LED_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:187]
+ERROR: [VRFC 10-2063] Module <Button> not found while processing module instance <Button_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:197]
+ERROR: [VRFC 10-2063] Module <Switch> not found while processing module instance <Switch_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:205]
+ERROR: [VRFC 10-2063] Module <Digital_LED> not found while processing module instance <Digital_LED_0> [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:213]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+add_files -norecurse E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/defines.vh
+WARNING: [filemgmt 56-12] File 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/defines.vh' cannot be added to the project because it already exists in the project, skipping this file
+add_files -norecurse {E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/controller.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/IF_ID.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/LED.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/Switch.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/Digital_LED.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/ID_EX.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/EX_MEM.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/RF.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/Bridge.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/SEXT.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/PC.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/ALU.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/MEM_WB.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/if_stop.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/Button.v E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/NPC.v}
+WARNING: [filemgmt 56-12] File 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/Bridge.v' cannot be added to the project because it already exists in the project, skipping this file
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'miniRV_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.coe'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj miniRV_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/Button.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Button
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/Digital_LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Digital_LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/EX_MEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/ID_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/MEM_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEM_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/NPC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/RF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RF
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/SEXT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEXT
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/Switch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Switch
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/new/if_stop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_stop
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto e1f68395fb5e4a219a1ab4c942d2609d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'switch' on this module [E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sim_1/new/miniRV_sim.v:35]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Wed Jul 19 16:03:52 2023] Launched synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 16:03:52 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50.000} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {17} CONFIG.MMCM_CLKOUT0_DIVIDE_F {17} CONFIG.CLKOUT1_JITTER {203.457} CONFIG.CLKOUT1_PHASE_ERROR {155.540}] [get_ips cpuclk]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+reset_run cpuclk_synth_1
+launch_runs -jobs 16 cpuclk_synth_1
+[Wed Jul 19 16:06:18 2023] Launched cpuclk_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Wed Jul 19 16:06:30 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sim_1/new/cpuclk_sim.v w ]
+add_files -fileset sim_1 E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sim_1/new/cpuclk_sim.v
+update_compile_order -fileset sim_1
+set_property top cpuclk_sim [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Wed Jul 19 16:09:46 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpuclk_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.coe'
+INFO: [SIM-utils-43] Exported 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpuclk_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sim_1/new/cpuclk_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto e1f68395fb5e4a219a1ab4c942d2609d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cpuclk_sim_behav xil_defaultlib.cpuclk_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=17,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.cpuclk_clk_wiz
+Compiling module xil_defaultlib.cpuclk
+Compiling module xil_defaultlib.cpuclk_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpuclk_sim_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/xsim.dir/cpuclk_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul 19 16:11:54 2023...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpuclk_sim_behav -key {Behavioral:sim_1:Functional:cpuclk_sim} -tclbatch {cpuclk_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source cpuclk_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpuclk_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1198.340 ; gain = 6.090
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Wed Jul 19 16:12:01 2023] Launched synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 16:12:01 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+set_property -dict [list CONFIG.PRIM_SOURCE {Global_buffer}] [get_ips cpuclk]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+reset_run cpuclk_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1
+
+launch_runs -jobs 16 cpuclk_synth_1
+[Wed Jul 19 16:21:20 2023] Launched cpuclk_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Wed Jul 19 16:21:28 2023] Launched cpuclk_synth_1, synth_1...
+Run output will be captured here:
+cpuclk_synth_1: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+synth_1: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 16:21:28 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+set_property -dict [list CONFIG.memory_type {rom}] [get_ips IROM]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'IROM'...
+catch { config_ip_cache -export [get_ips -all IROM] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci] -no_script -sync -force -quiet
+reset_run IROM_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/IROM_synth_1
+
+launch_runs -jobs 16 IROM_synth_1
+[Wed Jul 19 16:23:16 2023] Launched IROM_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/IROM_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Wed Jul 19 16:24:44 2023] Launched IROM_synth_1, synth_1...
+Run output will be captured here:
+IROM_synth_1: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/IROM_synth_1/runme.log
+synth_1: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 16:24:44 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1205.750 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/miniRV_SoC.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/miniRV_SoC.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100.000} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {9} CONFIG.MMCM_CLKOUT0_DIVIDE_F {9} CONFIG.CLKOUT1_JITTER {137.681} CONFIG.CLKOUT1_PHASE_ERROR {105.461}] [get_ips cpuclk]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+reset_run cpuclk_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1
+
+launch_runs -jobs 16 cpuclk_synth_1
+[Wed Jul 19 16:38:59 2023] Launched cpuclk_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Wed Jul 19 16:39:30 2023] Launched synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 16:39:30 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {75.000} CONFIG.MMCM_DIVCLK_DIVIDE {4} CONFIG.MMCM_CLKFBOUT_MULT_F {33} CONFIG.MMCM_CLKOUT0_DIVIDE_F {11} CONFIG.CLKOUT1_JITTER {272.433} CONFIG.CLKOUT1_PHASE_ERROR {261.747}] [get_ips cpuclk]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+reset_run cpuclk_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1
+
+launch_runs -jobs 16 cpuclk_synth_1
+[Wed Jul 19 16:44:37 2023] Launched cpuclk_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {90.000} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {9} CONFIG.MMCM_CLKOUT0_DIVIDE_F {10} CONFIG.CLKOUT1_JITTER {140.709} CONFIG.CLKOUT1_PHASE_ERROR {105.461}] [get_ips cpuclk]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+reset_run cpuclk_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1
+
+launch_runs -jobs 16 cpuclk_synth_1
+[Wed Jul 19 16:45:11 2023] Launched cpuclk_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Wed Jul 19 16:45:28 2023] Launched cpuclk_synth_1, synth_1...
+Run output will be captured here:
+cpuclk_synth_1: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+synth_1: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 16:45:28 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {80.000} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {44} CONFIG.MMCM_CLKOUT0_DIVIDE_F {11} CONFIG.CLKOUT1_JITTER {285.756} CONFIG.CLKOUT1_PHASE_ERROR {307.118}] [get_ips cpuclk]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+reset_run cpuclk_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1
+
+launch_runs -jobs 16 cpuclk_synth_1
+[Wed Jul 19 16:50:39 2023] Launched cpuclk_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs impl_1 -jobs 16
+[Wed Jul 19 16:50:50 2023] Launched cpuclk_synth_1, synth_1...
+Run output will be captured here:
+cpuclk_synth_1: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+synth_1: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 16:50:50 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {75.000} CONFIG.MMCM_DIVCLK_DIVIDE {4} CONFIG.MMCM_CLKFBOUT_MULT_F {33} CONFIG.CLKOUT1_JITTER {272.433} CONFIG.CLKOUT1_PHASE_ERROR {261.747}] [get_ips cpuclk]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP cpuclk, cache-ID = 288dfc58ad526c40; cache size = 8.460 MB.
+catch { [ delete_ip_run [get_ips -all cpuclk] ] }
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1
+
+INFO: [Project 1-386] Moving file 'e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci' from fileset 'cpuclk' to fileset 'sources_1'.
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci'
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs impl_1 -jobs 16
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci' is already up-to-date
+[Wed Jul 19 16:55:52 2023] Launched synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 16:55:52 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {60.000} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {42} CONFIG.MMCM_CLKOUT0_DIVIDE_F {14} CONFIG.CLKOUT1_JITTER {313.062} CONFIG.CLKOUT1_PHASE_ERROR {310.955}] [get_ips cpuclk]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+launch_runs -jobs 16 cpuclk_synth_1
+[Wed Jul 19 17:00:27 2023] Launched cpuclk_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs impl_1 -jobs 16
+[Wed Jul 19 17:01:13 2023] Launched synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 17:01:13 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50.000} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {17} CONFIG.MMCM_CLKOUT0_DIVIDE_F {17} CONFIG.CLKOUT1_JITTER {203.457} CONFIG.CLKOUT1_PHASE_ERROR {155.540}] [get_ips cpuclk]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP cpuclk, cache-ID = a0b3c62f9edaab55; cache size = 8.515 MB.
+catch { [ delete_ip_run [get_ips -all cpuclk] ] }
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1
+
+INFO: [Project 1-386] Moving file 'e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci' from fileset 'cpuclk' to fileset 'sources_1'.
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci'
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs impl_1 -jobs 16
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci' is already up-to-date
+[Wed Jul 19 17:05:56 2023] Launched synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 17:05:56 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {55.000} CONFIG.MMCM_DIVCLK_DIVIDE {4} CONFIG.MMCM_CLKFBOUT_MULT_F {33} CONFIG.MMCM_CLKOUT0_DIVIDE_F {15} CONFIG.CLKOUT1_JITTER {291.846} CONFIG.CLKOUT1_PHASE_ERROR {261.747}] [get_ips cpuclk]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+launch_runs -jobs 16 cpuclk_synth_1
+[Wed Jul 19 17:09:35 2023] Launched cpuclk_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs impl_1 -jobs 16
+[Wed Jul 19 17:10:11 2023] Launched synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 17:10:12 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {52.000} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {52} CONFIG.MMCM_CLKOUT0_DIVIDE_F {20} CONFIG.CLKOUT1_JITTER {255.201} CONFIG.CLKOUT1_PHASE_ERROR {300.278}] [get_ips cpuclk]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+reset_run cpuclk_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1
+
+launch_runs -jobs 16 cpuclk_synth_1
+[Wed Jul 19 17:14:28 2023] Launched cpuclk_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs impl_1 -jobs 16
+[Wed Jul 19 17:14:41 2023] Launched cpuclk_synth_1, synth_1...
+Run output will be captured here:
+cpuclk_synth_1: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+synth_1: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 17:14:41 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {51.000} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {51} CONFIG.CLKOUT1_JITTER {260.227} CONFIG.CLKOUT1_PHASE_ERROR {300.046}] [get_ips cpuclk]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+reset_run cpuclk_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1
+
+launch_runs -jobs 16 cpuclk_synth_1
+[Wed Jul 19 17:19:27 2023] Launched cpuclk_synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs impl_1 -jobs 16
+[Wed Jul 19 17:20:19 2023] Launched synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 17:20:19 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50.000} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {17} CONFIG.MMCM_CLKOUT0_DIVIDE_F {17} CONFIG.CLKOUT1_JITTER {203.457} CONFIG.CLKOUT1_PHASE_ERROR {155.540}] [get_ips cpuclk]
+generate_target all [get_files  e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP cpuclk, cache-ID = a0b3c62f9edaab55; cache size = 8.679 MB.
+catch { [ delete_ip_run [get_ips -all cpuclk] ] }
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1
+
+INFO: [Project 1-386] Moving file 'e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci' from fileset 'cpuclk' to fileset 'sources_1'.
+export_ip_user_files -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci'
+export_simulation -of_objects [get_files e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs impl_1 -jobs 16
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'e:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci' is already up-to-date
+[Wed Jul 19 17:24:45 2023] Launched synth_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+[Wed Jul 19 17:24:45 2023] Launched impl_1...
+Run output will be captured here: E:/comp2012/proj_miniRV/proj_pipeline/proj_pipeline.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 19 17:29:50 2023...
